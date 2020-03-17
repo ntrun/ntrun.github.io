@@ -1,6 +1,6 @@
 @charset "gb2312";
 /* CSS Document */
-body{font-family:"微软雅黑","宋体","Arial Narrow"; font-size:12px; line-height:22px;}
+body{font-family:"寰蒋闆呴粦","瀹嬩綋","Arial Narrow"; font-size:12px; line-height:22px;}
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,fieldset,legend,input,button,textarea,p,th,td{margin:0;padding:0;}
 img{border:0;}
 input,button,textarea,select,option{font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit;}
@@ -16,15 +16,15 @@ a:visited{ text-decoration:underline;color:#666;}
 a:hover{ text-decoration:underline;color:#177BDD;}
 a:active{ text-decoration:underline;color:#177BDD;}
 
-/*常用背景颜色*/
+/*甯哥敤鑳屾櫙棰滆壊*/
 .bgFFF{background:#FFF}
 .bgF00{background:#F00;}
 .bg000{background:#000;}
-/* 常用宽度 */
+/* 甯哥敤瀹藉害 */
 .w980{ width:980px; margin:0 auto;overflow:hidden;}
 .w960{ width:960px;margin:0 auto;overflow:hidden;}
 .mid{ margin-left:auto; margin-right:auto;}
-/*常用间隔*/
+/*甯哥敤闂撮殧*/
 .mt5{margin-top:5px;}
 .mt10{margin-top:10px;}
 .mb10{margin-bottom:10px;}
@@ -67,12 +67,12 @@ a:active{ text-decoration:underline;color:#177BDD;}
 .ptb15{padding-top:15px; padding-bottom:15px;}
 .ptb20{padding-top:20px; padding-bottom:20px;}
 .pl30{ padding-left:30px;}
-/*常用浮动*/
+/*甯哥敤娴姩*/
 .fl{float:left;}
 .fr{float:right;}
 .fld{float:left;_display:inline;}
 .frd{float:right;_display:inline;}
-/*常用文字设置*/
+/*甯哥敤鏂囧瓧璁剧疆*/
 .fs12{font-size:12px;}
 .fs14{font-size:14px;}
 .fs16{font-size:16px;}
