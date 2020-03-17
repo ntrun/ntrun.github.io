@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="utf-8">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>nTrun 使用技巧</title>
+<meta name="keywords" content="nTrun,快速启动,快捷启动,Win+R,运行,启动器,软件管理" />
+<meta name="description" content="nTrun 快速启动与Win+R运行完美融合，无内存占用，2秒直达！更是优秀的本地程序管理工具，让你尽享应用的乐趣！" />
+<link href="css/reset.css" rel="stylesheet" type="text/css" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link rel="shortcut icon" href="favicon.ico"/>
+<link rel="bookmark" href="favicon.ico"/>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?c7fcdf06714d9d5d3ac0b2e8e3cbc1db";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</head>
+<body style="background:#f7f5f6;">
+<div class="header">
+  <div class="warp">
+    <div class="logo"><img src="images/header_logo.png" alt="nTrun"/></div>
+    <ul class="menu">
+      <li><a href="index.html">首页</a></li>
+      <li class="line"></li>
+      <li><a href="log.html">更新日志</a></li>
+      <li class="line"></li>
+      <li class="current"><a href="intro.html">使用相关</a></li>
+      <li class="line"></li>
+      <li><a href="advise.html">反馈建议</a></li>
+      <li class="line"></li>
+      <li><a href="offer.html">捐助支持</a></li>
+    </ul>
+  </div>
+</div>
+<div class="container">
+  <div class="page">
+    <div class="page-bd">
+      <div class="tabs">
+        <ul>
+          <li><a href="intro.html">介绍</a></li>
+          <li class="cur"><a href="skill.html">技巧</a></li>
+          <li><a href="skin.html">皮肤</a></li>
+        </ul>
+      </div>
+      <div class="tabs-bd">
+        <h4>欢迎使用 nTrun，以下内容部分转自“善用佳软”</h4>
+        <h3>启动某分区根目录</h3>
+        <p>如果想直接打开比如 D:\ 这样的目录，其实不需要加入到 nTrun，直接 Win+R d: 回车就可以了。</p>
+        <h3>为项目命名</h3>
+        <p> &nbsp; &nbsp;最根本的原则就是适合自己。比如，你记性好但键盘慢，则尽量让名称短一些，比如只用一个字母。如果你不在乎打字速度，一心装酷给别人看，则完全可以把notepad.exe快捷方式改为“我现在要打字了！！”。再如选择拼音缩写，还是英文缩写等。<br>
+          &nbsp; &nbsp;最常用的保持最短，比如单字母（word→w）。次常用的可以多几个字母（wink→w被占用，就用wink，或wi）。<br>
+          &nbsp; &nbsp;用文件名后缀作缩写是个好办法。word→doc， powerpoint→ppt……<br>
+          &nbsp; &nbsp;多版本只需要加数字或其他标识。比如fx2=Firefox v2.0，fx3=Firefox 3beta。再如tc=Total Commander官方原版，tcz=Total Commander张学思版，tcee=TC shanny版……</p>
+        <h3>快速切换IP地址</h3>
+        <p>对于经常切换IP 地址的网友来说，这一技巧极其实用。<br>
+          &nbsp; &nbsp;我如果出差到了上海，只要 win+r ip sh 即可；回到北京，再按一下 win+r ip bj 就好了。如何实现，见下文:<br>
+          &nbsp; &nbsp;创建如下批处理文件，命名为ipbj.bat，添加到Adde的项目中，以后就可以win+r ipbj (就是ip北京)运行了。<br>
+          &nbsp; &nbsp;如果是自动获取ip，我命名为ip0.bat。零，就算是没有吧。</p>
+        <p><strong>批处理文件如下</strong></p>
+        <p>@echo ip_beijing<br />
+          netsh interface ip set address local source=static addr=10.56.100.112 mask=255.255.255.0<br />
+          netsh interface ip set address name=local gateway=10.56.100.254 gwmetric=1<br />
+          netsh interface ip set dns local static 10.68.100.211</p>
+        <p>如果需要为IE设代理服务器（我上网主用Firefox，IE代理是为了msn），则可以加一句 call ipbj.reg</p>
+        <p><strong>此reg文件，比如</strong></p>
+        <p>Windows Registry Editor Version 5.00<br />
+          [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings]<br />
+          "ProxyServer"="10.18.100.133:8080"<br />
+          "ProxyOverride"="10.*.*.*;&lt;local&gt;"<br />
+          "ProxyEnable"=dword:00000001</p>
+        <p>取消代理，只要最后一句，设为0即可。</p>
+        <p>个人觉得，比软件清楚多了。</p>
+        <h3>快速访问网址URL</h3>
+        <p>有一种最快捷的方法：就是在浏览器路径的后面加上网址。</p>
+        <p>比如“D:\Theworld\theworld.exe http://adde.esy.es/”然后呢，启动名自己设置，就可以启动了！很简单吧。</p>
+        <h3>快速而自动完成系列操作</h3>
+        <p> &nbsp; &nbsp;比如，可以按下 win+r gm，就会自动打开浏览器，自动进入gmail网页，自动输入用户名、密码，进入了Gmail信箱。</p>
+        <p><strong>再举善用佳软在工作中实际用的2例。</strong></p>
+        <p> &nbsp; &nbsp;win+r n，则自动打开Lotus Notes，自动输入密码，进入了公司邮箱。win+r mock，则自动打开SAP，自动连结mock环境，自动输入用户名密码，进入了SAP 回归测试系统。</p>
+        <p> &nbsp; &nbsp;这些自动操作都是借助一款神奇的小软件，AutoHotkey完成的，如何实现，<a href="http://blog.sina.com.cn/s/blog_46dac66f010005g7.html">AutoHotkey 0 级入门教程:让重复工作一键完成</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer">
+  <p>Copyright&nbsp;&copy;2013&nbsp;-&nbsp;2020 <a href="http://isealt.lofter.com/" target="_blank">Sealt</a>&nbsp;All Rights Reserved .</p>
+</div>
+</body>
+<footer>
+  <div style="display:none">
+  </div>
+</footer>
+</html>
